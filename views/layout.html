@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>Trip Planner</title>
+
+</head>
+<body>
+
+  <div class="navbar">
+    <ul>
+      <li a href='/'>home</li>
+      <li a href='/about'>about</li>
+      <li a href='/contact'>contact</li>
+    </ul>
+  </div>
+
+  <div class="header">
+    <img src="http://media.architecturaldigest.com/photos/5699802bc6772b7614567435/2:1/w_2560/new-york-city-guide.jpg">
+    <h1>super duper awesome trip planner</h1>
+  </div>
+
+
+<div class="container-fluid">
+  {% block content %}
+  {% endblock %}
+</div>
+
+  <!--Scripts go here!-->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE7JtSzcH3UrZjC22n9cffPumVNBwJoOo&callback=initMap" async defer></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link rel='stylesheet' href='stylesheets/style.css' >
+   <script>var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }</script>
+
+</body>
+</html>
